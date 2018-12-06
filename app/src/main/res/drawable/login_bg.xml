@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <item android:id="@+id/ribbon_rect_master">
+        <shape android:shape="rectangle">
+            <corners android:radius="0dp"/>
+            <gradient
+                android:angle="45"
+                android:endColor="@color/loginBgMasterEnd"
+                android:startColor="@color/loginBgMasterStart"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <item android:id="@+id/ribbon_rect_slave"
+        android:top="-41dp"
+        android:bottom="-44dp"
+        android:left="135dp"
+        android:right="-100dp">
+
+        <rotate
+            android:fromDegrees="45">
+            <shape android:shape="rectangle">
+                <gradient
+                    android:angle="45"
+                    android:endColor="@color/loginBgSlaveEnd"
+                    android:startColor="@color/loginBgSlaveStart"
+                    android:type="linear" />
+            </shape>
+        </rotate>
+    </item>
+
+
+</layer-list>

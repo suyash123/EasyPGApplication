@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="grey">#adadae</color>
+
+    <color name="loginBgMasterStart">#3094F7</color>
+    <color name="loginBgMasterEnd">#69FFFA</color>
+    <color name="loginBgSlaveStart">#39E7FC</color>
+    <color name="loginBgSlaveEnd">#0189ff</color>
+
+    <color name="nextBg">#00BFFF</color>
+    <color name="highlightText">#DC143C</color>
+</resources>
