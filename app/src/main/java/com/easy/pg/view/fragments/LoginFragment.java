@@ -1,6 +1,7 @@
 package com.easy.pg.view.fragments;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import com.easy.pg.app.BR;
 import com.easy.pg.app.databinding.LoginInfoBinding;
 import com.easy.pg.app.R;
+import com.easy.pg.view.HomeActivity;
 import com.easy.pg.view.callbacks.ILoginCallbacks;
 import com.easy.pg.viewmodel.LoginViewModel;
 
@@ -45,6 +47,11 @@ public class LoginFragment extends Fragment implements ILoginCallbacks{
     @Override
     public void onLogin(boolean isSuccess, String message) {
         showSnackBarMessage(message);
+        if(isSuccess){
+            Intent intent = new Intent(getActivity(), HomeActivity.class);
+            startActivity(intent);
+            getActivity().finish();
+        }
     }
 
     @Override

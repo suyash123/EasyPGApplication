@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/st__action_bar_default_height"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/bg_gradient_blue"
+            app:collapseIcon="@drawable/ic_search_commit"
+            app:popupTheme="@style/Base.Widget.AppCompat.Light.PopupMenu.Overflow"
+            app:theme="@style/ToolbarTheme">
+
+            <ImageView
+                android:id="@+id/hikeIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="left"
+                android:contentDescription="easyPg"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EasyPG"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <View
+    android:id="@+id/anchor_dropdown"
+    android:layout_width="match_parent"
+    android:layout_height="0dp" />
+
+</android.support.design.widget.AppBarLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data class="RegisterInfoBinding">
@@ -10,7 +11,6 @@
 
     </data>
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/login_bg">
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Name"
                     android:inputType="textPersonName"
-                    android:text="@{regVar.registerInfo.name}" />
+                    android:text="@={regVar.registerInfo.name}" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Mobile"
                     android:inputType="phone"
-                    android:text="@{regVar.registerInfo.mobile}" />
+                    android:text="@={regVar.registerInfo.mobile}" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:text="@{regVar.registerInfo.email}" />
+                    android:text="@={regVar.registerInfo.email}" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    android:text="@{regVar.registerInfo.pwd}" />
+                    android:text="@={regVar.registerInfo.pwd}" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Confirm Password"
                     android:inputType="textPassword"
-                    android:text="@{regVar.registerInfo.cnfPwd}" />
+                    android:text="@={regVar.registerInfo.cnfPwd}" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
