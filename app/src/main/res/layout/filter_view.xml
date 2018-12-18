@@ -35,10 +35,11 @@
         <android.support.v4.view.ViewPager
             android:layout_below="@+id/tabs_types"
             android:id="@+id/vp_types"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginBottom="48dp"
             android:elevation="-4dp" />
 
 
@@ -47,7 +48,7 @@
             android:id="@+id/ll_buttons"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="48dp"
             android:orientation="horizontal"
             android:weightSum="2">
 

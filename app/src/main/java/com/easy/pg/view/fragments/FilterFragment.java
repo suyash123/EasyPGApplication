@@ -208,12 +208,12 @@ public class FilterFragment extends CustomFilterFragment{
                     if (tv.getTag() != null && tv.getTag().equals(AppConstants.SELECTED_TAG)) {
                         tv.setTag(AppConstants.UNSELECTED_TAG);
                         tv.setBackgroundResource(R.drawable.tab_unselect);
-                        tv.setTextColor(ContextCompat.getColor(getContext(), R.color.filters_tabs));
+                        tv.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
                         removeFromSelectedMap(filter_category, finalKeys.get(finalI));
                     } else {
                         tv.setTag(AppConstants.SELECTED_TAG);
                         tv.setBackgroundResource(R.drawable.tab_select);
-                        tv.setTextColor(ContextCompat.getColor(getContext(), R.color.filters_header));
+                        tv.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
                         addToSelectedMap(filter_category, finalKeys.get(finalI));
                     }
                 }
@@ -229,10 +229,10 @@ public class FilterFragment extends CustomFilterFragment{
             if (applied_filters != null && applied_filters.get(filter_category) != null && applied_filters.get(filter_category).contains(keys.get(finalI))) {
                 tv.setTag(AppConstants.SELECTED_TAG);
                 tv.setBackgroundResource(R.drawable.tab_select);
-                tv.setTextColor(ContextCompat.getColor(getContext(), R.color.filters_header));
+                tv.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
             } else {
                 tv.setBackgroundResource(R.drawable.tab_unselect);
-                tv.setTextColor(ContextCompat.getColor(getContext(), R.color.filters_tabs));
+                tv.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
             }
             textviews.add(tv);
 

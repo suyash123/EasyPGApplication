@@ -6,18 +6,20 @@ public class PGFilterInfo {
     private String area;
     private String college;
     private float distance;
-    private int price;
+    private int priceRangeStart;
+    private int priceRangeEnd;
     private float rating;
 
     public PGFilterInfo() {
     }
 
-    public PGFilterInfo(String pg, String area, String college, float distance, int price, float rating) {
+    public PGFilterInfo(String pg, String area, String college, float distance, int priceRangeStart, int priceRangeEnd, float rating) {
         this.pg = pg;
         this.area = area;
         this.college = college;
         this.distance = distance;
-        this.price = price;
+        this.priceRangeStart = priceRangeStart;
+        this.priceRangeEnd = priceRangeEnd;
         this.rating = rating;
     }
 
@@ -53,12 +55,20 @@ public class PGFilterInfo {
         this.distance = distance;
     }
 
-    public int getPrice() {
-        return price;
+    public int getPriceRangeStart() {
+        return priceRangeStart;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPriceRangeStart(int priceRangeStart) {
+        this.priceRangeStart = priceRangeStart;
+    }
+
+    public int getPriceRangeEnd() {
+        return priceRangeEnd;
+    }
+
+    public void setPriceRangeEnd(int priceRangeEnd) {
+        this.priceRangeEnd = priceRangeEnd;
     }
 
     public float getRating() {
@@ -76,7 +86,8 @@ public class PGFilterInfo {
                 ", area='" + area + '\'' +
                 ", college='" + college + '\'' +
                 ", distance=" + distance +
-                ", price=" + price +
+                ", priceRangeStart=" + priceRangeStart +
+                ", priceRangeEnd=" + priceRangeEnd +
                 ", rating=" + rating +
                 '}';
     }

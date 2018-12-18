@@ -18,7 +18,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="4dp"
-    app:cardBackgroundColor="@color/translucent_blue"
+    app:cardBackgroundColor="@color/white"
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
     android:layout_marginTop="3dp"
@@ -50,14 +50,10 @@
                 android:layout_marginTop="6dp"
                 android:layout_alignParentTop="true">
 
-                <ImageView
-                    android:id="@+id/sharing_bg"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/msg_bar_on_img"/>
                 <TextView
                     android:id="@+id/sharing_text"
-                    android:layout_width="100dp"
+                    android:background="@drawable/msg_bar_on_img"
+                    android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
@@ -161,6 +157,10 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:paddingLeft="2dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:maxWidth="250dp"
+                            android:scrollHorizontally="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                             android:text="@{pgInfo.desc}"/>
                 </LinearLayout>

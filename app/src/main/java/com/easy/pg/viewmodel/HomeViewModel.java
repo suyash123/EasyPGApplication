@@ -58,20 +58,24 @@ public class HomeViewModel extends ViewModel{
     private ArrayList<PGSearchInfo> getSampleList(){
         ArrayList<PGSearchInfo> pgSearchInfos = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            PGSearchInfo searchInfo = new PGSearchInfo("Twin Bed Room", "PSIR, Janakpuri", "24-B, Room-102, 2nd Floor", "Furnished room, Good Ambience", "Rs 1200", "1 Km Away");
+            PGSearchInfo searchInfo = new PGSearchInfo("Twin Bed Room", "PSIR, Chandigadh", "24-B, Room-102, 2nd Floor", "Furnished room, Good Ambience", "Rs 1200", "within 1 Km");
             if(i==0){
                 searchInfo.setCoverImgUrl("https://www.czech-inn.com/wp-content/uploads/2018/08/czech_inn_hostel_prague_16_bed_dorm_room_3_380x213.jpg");
             }
             if(i==1){
+                searchInfo = new PGSearchInfo("Twin Bed Room", "IIT, Delhi", "24-B, Room-102, 2nd Floor", "Semi Furnished room, Best place for study", "Rs 1000", "within 1.5 Km");
                 searchInfo.setCoverImgUrl("http://ccd.hwstatic.com/propertyimages/2/272919/3.jpg");
             }
             if(i==2){
+                searchInfo = new PGSearchInfo("Single Bed Room", "IMT, Gaziabaad", "24-B, Room-102, 2nd Floor", "Furnished room, Good Locality", "Rs 1399", "within 2 Km");
                 searchInfo.setCoverImgUrl("https://www.czech-inn.com/wp-content/uploads/2018/08/czech_inn_hostel_prague_premium_mixed_dorm_950x500-1300x698_c.jpg");
             }
             if(i==3){
+                searchInfo = new PGSearchInfo("Single Bed Room", "VIT, Vellore", "24-B, Room-102, 2nd Floor", "Furnished room, Good Location", "Rs 2000", "within 5 Km");
                 searchInfo.setCoverImgUrl("https://image.flyin.com/f/500x330,q85/http://images.flyin.com/ebtranet-images/117406/CZ506963%20(2).jpg");
             }
             if(i==4){
+                searchInfo = new PGSearchInfo("Single Bed Room", "IIT, Kanpur", "24-B, Room-102, 2nd Floor", "Full Furnished room, Good Security", "Rs 3500", "within 4 Km");
                 searchInfo.setCoverImgUrl("http://mangotreehostel.com/wp-content/uploads/2017/07/mango-tree-hostel-rio-de-janeiro-quadruple-deluxe-private-ensuite-5.jpg");
             }
             pgSearchInfos.add(searchInfo);
