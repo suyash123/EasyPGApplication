@@ -46,6 +46,10 @@ dependencies {
 
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
+
+    implementation('com.google.android:flexbox:0.3.2') {
+        exclude group: 'com.android.support'
+    }
 }
 
 configurations.all {

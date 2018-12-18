@@ -27,4 +27,6 @@
     <color name="translucent_white">#b1ffffff</color>
     <color name="translucent_black">#c5000000</color>
 
+    <color name="filters_tabs">#b3e5fc</color>
+    <color name="filters_header">#303f9f</color>
 </resources>

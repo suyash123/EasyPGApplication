@@ -10,4 +10,10 @@
 
     <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
+    <style
+        name="dialog_animation_fade" >
+        <item name="android:windowEnterAnimation">@anim/bottomsheet_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottomsheet_exit</item>
+    </style>
+
 </resources>

@@ -8,13 +8,21 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.easy.pg.app.R;
+import com.easy.pg.model.FilterData;
+import com.easy.pg.modules.dialog.filter.CustomFilterFragment;
 import com.easy.pg.view.fragments.AccountFragment;
+import com.easy.pg.view.fragments.FilterFragment;
 import com.easy.pg.view.fragments.HomeFragment;
 
-public class HomeActivity extends AppCompatActivity {
+import java.util.HashMap;
+import java.util.List;
+
+public class HomeActivity extends AppCompatActivity implements CustomFilterFragment.Callbacks, CustomFilterFragment.AnimationListener{
 
     private HomeFragment homeFragment;
     private AccountFragment accountFragment;
+    private FilterData filterData;
+    private HashMap<String, List<String>> applied_filters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +51,9 @@ public class HomeActivity extends AppCompatActivity {
 
             loadHomeFragment();
         }
+
+        applied_filters = new HashMap<>();
+        filterData = FilterData.getSampleFilterData();
     }
 
     private void loadHomeFragment() {
@@ -59,5 +70,38 @@ public class HomeActivity extends AppCompatActivity {
             accountFragment = new AccountFragment();
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentFrame, accountFragment, AccountFragment.TAG).commit();
+    }
+
+    public FilterData getFilterData() {
+        return filterData;
+    }
+
+    public HashMap<String, List<String>> getApplied_filters() {
+        return applied_filters;
+    }
+
+    @Override
+    public void onResult(Object result) {
+        Log.d("HomeActivity", "On Result");
+    }
+
+    @Override
+    public void onOpenAnimationStart() {
+        Log.d("HomeActivity", "onOpenAnimationStart");
+    }
+
+    @Override
+    public void onOpenAnimationEnd() {
+        Log.d("HomeActivity", "onOpenAnimationEnd");
+    }
+
+    @Override
+    public void onCloseAnimationStart() {
+        Log.d("HomeActivity", "onCloseAnimationStart");
+    }
+
+    @Override
+    public void onCloseAnimationEnd() {
+        Log.d("HomeActivity", "onCloseAnimationEnd");
     }
 }

@@ -9,10 +9,4 @@
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="ifRoom|collapseActionView" />
 
-    <item
-        android:id="@+id/m_filter"
-        android:icon="@drawable/ic_filer"
-        android:title="Type to search"
-        app:showAsAction="ifRoom|collapseActionView" />
-
 </menu>

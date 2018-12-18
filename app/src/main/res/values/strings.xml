@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">EasyPGApplication</string>
+    <string name="bottom_view_pager_behavior" translatable="false">com.easy.pg.modules.dialog.BottomViewPagerBehaviour</string>
+
+    <string name="pg">PG</string>
+    <string name="area">AREA</string>
+    <string name="distance">DISTANCE</string>
+    <string name="college">COLLEGE</string>
+    <string name="price">PRICE</string>
+    <string name="rating">RATING</string>
 </resources>

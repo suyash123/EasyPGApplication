@@ -6,6 +6,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -21,20 +22,25 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.easy.pg.app.R;
+import com.easy.pg.model.FilterData;
 import com.easy.pg.model.PGSearchInfo;
 import com.easy.pg.view.adapters.HomeAdapter;
 import com.easy.pg.viewmodel.HomeViewModel;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class HomeFragment extends Fragment{
 
     public static final String TAG = HomeFragment.class.getSimpleName();
     private MenuItem mSearchItem;
-    private MenuItem mFilterItem;
+//    private MenuItem mFilterItem;
     private Toolbar mToolbar;
     private HomeViewModel homeViewModel;
     private HomeAdapter homeAdapter;
+    private FilterFragment filterFragment;
+    private FloatingActionButton fab;
 
     @Nullable
     @Override
@@ -57,6 +63,13 @@ public class HomeFragment extends Fragment{
             public void onChanged(@Nullable ArrayList<PGSearchInfo> pgSearchInfos) {
                 homeAdapter.setPgSearchInfos(pgSearchInfos);
                 recyclerView.setAdapter(homeAdapter);
+            }
+        });
+        fab = (FloatingActionButton) root.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFilterFragment();
             }
         });
         return root;
@@ -109,13 +122,22 @@ public class HomeFragment extends Fragment{
             }
         });
 
-        mFilterItem = menu.findItem(R.id.m_filter);
-        mFilterItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                //ToDo
-                return false;
-            }
-        });
+//        mFilterItem = menu.findItem(R.id.m_filter);
+//        mFilterItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem menuItem) {
+//                //ToDo
+//                return false;
+//            }
+//        });
+    }
+
+    private void loadFilterFragment() {
+        if (filterFragment == null) {
+            filterFragment = new FilterFragment();
+            filterFragment.setParentFab(fab);
+        }
+        filterFragment.show(((AppCompatActivity)getActivity()).getSupportFragmentManager(), FilterFragment.TAG);
+//        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentFrame, filterFragment, FilterFragment.TAG).commit();
     }
 }
